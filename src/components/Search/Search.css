@@ -1,0 +1,14 @@
+.search-result {
+    padding: 20px 20px;
+    background-color: antiquewhite;
+    margin: 20px 20px;
+}
+.custom-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card-body img {
+    width: 100px;
+}

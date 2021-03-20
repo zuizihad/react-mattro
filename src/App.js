@@ -1,16 +1,45 @@
 import './App.css';
-import firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from './firebase.config';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Header from './components/Header/Header';
+import NotFound from './components/NotFound/NotFound'
+import Destination from './components/Destination/Destination';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Search from './components/Search/Search';
 
-
-firebase.initializeApp(firebaseConfig);
+export const userContext = createContext();
 
 function App() {
+  const [loggedInUser, setloggedInUser] = useState({});
   return (
-    <div>
-      <h1>yes</h1>
-    </div>
+    <userContext.Provider value={[loggedInUser, setloggedInUser]}>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
+          <Route path='/home'>
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <PrivateRoute path="/search/:value">
+            <Search></Search>
+          </PrivateRoute>
+          <Route path='*'>
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </Router>
+    </userContext.Provider>
   );
 }
 

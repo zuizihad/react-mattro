@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "vehicle": "car",
+        "person": 3,
+        "price": 67,
+        "image": "https://t4.ftcdn.net/jpg/03/32/56/67/360_F_332566713_q0QLBQ0BWkG5ed7DGRiuFIjvZNwEL9k2.jpg"
+    },
+    {
+        "id": 2,
+        "vehicle": "bus",
+        "person": 4,
+        "price": 47,
+        "image": "https://png.pngtree.com/png-vector/20191205/ourmid/pngtree-yellow-school-bus-vector-illustration-on-white-background-png-image_2025515.jpg"
+    },
+    {
+        "id": 3,
+        "vehicle": "bike",
+        "person": 2,
+        "price": 47,
+        "image": "https://images.vexels.com/media/users/3/152654/isolated/preview/e5694fb12916c00661195c0a833d1ba9-sports-bike-icon-by-vexels.png"
+    },
+    {
+        "id": 4,
+        "vehicle": "train",
+        "person": 7,
+        "price": 100,
+        "image": "https://cdn.iconscout.com/icon/free/png-256/train-2374393-1986386.png"
+    }
+]

@@ -1,0 +1,12 @@
+.home{
+    background-image: url(../../images/Bg.png);
+    height: 100%;
+    object-fit: cover;
+    width: auto;
+}
+
+.vehicle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
