@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import FakeData from '../../FakeData/FakeData.json'
+import Map from '../Map/Map';
 import './Search.css';
 
 const Search = () => {
@@ -38,13 +39,14 @@ const Search = () => {
     //     console.log(newInfo)
     // }
     const handleChange = e => {
+        console.log(e.target.value)
         setInfo({
             [e.target.name]: e.target.value
         });
     };
 
     return (
-        <div className="container">
+        <div className="my-container">
             <div className="row">
                 <div className="col-md-4">
                     {
@@ -53,7 +55,8 @@ const Search = () => {
                             <div class="card-body">
                                 <form onSubmit={handleSubmit}>
                                     <label htmlFor="pickFrom">Pick From</label>
-                                    <input className='form-control my-3' onClick={handleChange} type="text" name="from" placeholder="pick from" required />
+                                    {/* <input className='form-control my-3' onClick={handleChange} type="text" name="from" placeholder="pick from" required /> */}
+                                    <input onClick={handleChange} type="text" name="from" placeholder="pick from" />
                                     <label htmlFor="pickTo">Pick To</label>
                                     <input type="text" name="to" onClick={handleChange} className='my-3 form-control' placeholder="pick to" required />
                                     <label htmlFor="pickDate">Pick Date</label>
@@ -108,7 +111,7 @@ const Search = () => {
             </div>
 
             <div className="map">
-
+                <Map></Map>
             </div>
         </div>
     );

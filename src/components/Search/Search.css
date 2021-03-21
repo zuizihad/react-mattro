@@ -12,3 +12,7 @@
 .card-body img {
     width: 100px;
 }
+.my-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
